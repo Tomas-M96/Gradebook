@@ -6,12 +6,56 @@ namespace GradeBook
     public class Book
     {
         private List<double> grades;
-        public string Name;
+        private string name;
 
-        public Book(string name)
+        public string Name
+        {
+            get 
+            {
+                return name;
+            }
+            set 
+            {
+                if (!String.IsNullOrEmpty(value))
+                {
+                    name = value;
+                }
+                else
+                {
+                    throw new ArgumentNullException();
+                }
+            }
+        }
+
+        public Book(string _name)
         {
             grades = new List<double>();
-            Name = name;
+            name = _name;
+        }
+
+        public void AddGrade(char letter)
+        {
+            switch (letter)
+            {
+                case 'A':
+                case 'a':
+                    grades.Add(90);
+                    break;
+                case 'B':
+                case 'b':
+                    grades.Add(80);
+                    break;
+                case 'C':
+                case 'c':
+                    grades.Add(70);
+                    break;
+                case 'D':
+                case 'd':
+                    grades.Add(60);
+                    break;
+                default:
+                    break;
+            }
         }
 
         public void AddGrade(double _grade)

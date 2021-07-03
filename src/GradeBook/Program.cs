@@ -7,8 +7,26 @@ namespace GradeBook
     {
         static void Main(string[] args)
         {
-            Book book = new Book("Grades");
+            Book book;
             Console.WriteLine("Welcome to the Gradebook!");
+
+            do
+            {
+                Console.WriteLine("Please enter the name of your book:");
+                string input = Console.ReadLine();
+                try
+                {
+                    book = new Book(input);
+                    Console.WriteLine("Book Created");
+
+                    if (book.Name != null)
+                        break;
+                }
+                catch (ArgumentNullException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            } while (true);
 
             do
             {
