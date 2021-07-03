@@ -8,6 +8,9 @@ namespace GradeBook
         private List<double> grades;
         private string name;
 
+        public delegate void GradeAddedDelegate(object sender, EventArgs args);
+        public event GradeAddedDelegate GradeAddedEvent;
+
         public string Name
         {
             get 
@@ -63,6 +66,10 @@ namespace GradeBook
             if (_grade <= 100 && _grade >= 0)
             {
                 grades.Add(_grade);
+                if (GradeAddedEvent != null)
+                {
+                    GradeAddedEvent(this, new EventArgs());
+                }
             }
             else
             {

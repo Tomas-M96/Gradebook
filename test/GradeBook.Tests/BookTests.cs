@@ -10,7 +10,7 @@ namespace GradeBook.Tests
         public void BookTests_AddGrade()
         {
             Book book = new Book("Grades");
-            book.AddGrade(101);
+            book.AddGrade(100);
 
             //Assert.DoesNotContain(book, book.);
         }
