@@ -1,9 +1,11 @@
 ﻿using System;
 using Xunit;
 using GradeBook;
+using GradeBook.Classes;
 
 namespace GradeBook.Tests
 {
+    /*
     public class DelegateTests
     {
         public delegate string WriteLogDelegate(string message);
@@ -188,4 +190,5 @@ namespace GradeBook.Tests
             return name.ToUpper();
         }
     }
+    */
 }
