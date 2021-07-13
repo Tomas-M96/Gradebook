@@ -20,10 +20,12 @@ namespace GradeBook
                 Console.WriteLine("2. Write to Memory");
                 string input = Console.ReadLine();
 
+                //Try block to select a book type
                 try
                 {
                     if (input == "1")
                     {
+                        //Create a FileBook
                         book = CreateBook(true);
                         WriteConsoleColour.WriteCreated("Write to File Book Created");
                         InputGrades(book);
@@ -31,6 +33,7 @@ namespace GradeBook
                     }
                     else if (input == "2")
                     {
+                        //Create a MemoryBook
                         book = CreateBook(false);
                         WriteConsoleColour.WriteCreated("Write to Memory Book Created");
                         InputGrades(book);
@@ -49,6 +52,7 @@ namespace GradeBook
 
             Console.WriteLine("\n");
             Console.WriteLine($"--------------Gradebook {book.Name} Statistics--------------");
+            //Display book statistics
             book.DisplayStats();
         }
 
@@ -246,7 +250,7 @@ namespace GradeBook
         //Function to be called via event when a grade has been added
         private static void OnGradeAdded(object sender, EventArgs e)
         {
-            Console.WriteLine("A grade was added");
+            WriteConsoleColour.WriteCreated("A grade was added");
         }
     }
 

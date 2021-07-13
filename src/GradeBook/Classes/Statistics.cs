@@ -1,5 +1,7 @@
 namespace GradeBook
 {
+    //Class for statistics
+    //Uses default constructor
     public class Statistics
     {
         public double Total;

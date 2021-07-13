@@ -4,8 +4,8 @@ using GradeBook;
 using GradeBook.Classes;
 
 namespace GradeBook.Tests
-{
-    /*
+{ 
+    //Tests to demonstrate delegates and reference vs value types
     public class DelegateTests
     {
         public delegate string WriteLogDelegate(string message);
@@ -151,7 +151,7 @@ namespace GradeBook.Tests
 
         private Book GetBook(string name)
         {
-            return new Book(name);
+            return new MemoryBook(name);
         }
 
         private void SetName(Book book, string name)
@@ -161,12 +161,12 @@ namespace GradeBook.Tests
 
         private void GetBookSetName(Book book, string name)
         {
-            book = new Book(name);
+            book = new MemoryBook(name);
         }
 
         private void GetBookSetName(ref Book book, string name)
         {
-            book = new Book(name);
+            book = new MemoryBook(name);
         }
 
         private int GetInt()
@@ -190,5 +190,4 @@ namespace GradeBook.Tests
             return name.ToUpper();
         }
     }
-    */
 }

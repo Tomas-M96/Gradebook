@@ -8,6 +8,7 @@ namespace GradeBook.Tests
 {
     public class BookTests
     {
+        //Test to Add a StudentInfo instance to a FileBook
         [Fact]
         public void BookTests_AddRecordFileBook()
         {
@@ -22,6 +23,7 @@ namespace GradeBook.Tests
             Assert.Contains(studentInfo, book.Grades);
         }
 
+        //Test to Add a StudentInfo instance to a MemoryBook
         [Fact]
         public void BookTests_AddRecordMemoryBook()
         {
@@ -35,7 +37,8 @@ namespace GradeBook.Tests
             //Assert
             Assert.Contains(studentInfo, book.Grades);
         }
-        
+
+        //Test to calculate a MemoryBooks stats
         [Fact] //Attribute 
         public void BookTests_CalculateMemoryBookStats()
         {

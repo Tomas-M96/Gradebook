@@ -2,9 +2,12 @@ using System;
 using System.Collections.Generic;
 
 namespace GradeBook.Classes
-{
+{   
+    //MemoryBook class
+    //Inherits from Book, therefore implements IBook
     public class MemoryBook : Book
     {
+        //Constructor
         public MemoryBook(string name) : base(name)
         {
             Grades = new List<StudentInfo>();

@@ -5,6 +5,7 @@ using GradeBook.Classes;
 
 namespace GradeBook.Interfaces
 {
+    //Interface for IBook
     public interface IBook
     {
         List<StudentInfo> Grades { get; set; }

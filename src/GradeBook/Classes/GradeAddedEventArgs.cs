@@ -4,6 +4,8 @@ using System.Text;
 
 namespace GradeBook.Classes
 {
+    //Custom EventArgs type for the GradeAddedEvent
+    //Inherits from the base class EventArgs
     public class GradeAddedEventArgs : EventArgs
     {
         public string Name { get; set; }
